@@ -3,7 +3,8 @@
     <head>
       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
       <meta name="description" content="  ">
-      <title>intern information</title>
+      <title>INTERN INFORMATION</title>
+	  <link rel="<stylesheet" href="base"/>
       <style>
                 body {
   font-family: Arial, sans-serif;
@@ -33,6 +34,8 @@ nav a {
 }
 body {
 	font-family: Arial, sans-serif;
+
+	border: #370cf8;
 }
 
 section {
@@ -41,7 +44,7 @@ section {
       padding: 20px;
       border: 5px solid  #0e30f3;
       }
-
+      
 label {
 	display: block;
 	margin-top: 10px;
@@ -56,7 +59,7 @@ input, select, textarea {
 }
 
 button[type="submit"] {
-	background-color: #0f1ffad2;
+	background-color: #0b1aeee3;
 	color: white;
 	padding: 10px 20px;
 	border: none;
@@ -66,7 +69,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-	background-color: #0d44f7e1;
+	background-color: #cad4f5e1;
 }
 
 		input[type="file"] {
@@ -74,19 +77,16 @@ button[type="submit"]:hover {
 			border-radius: 4px;
 			font-size: 16px;
 			padding: 12px 15px;
-		}
+	 }
+		section a {
+      display: inline-block;
+      background-color: #0e30f3;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      }
 
-		button[type="submit"] {
-			background-color: #3c09f1;
-			border: none;
-			border-radius: 4px;
-			color: white;
-			font-size: 16px;
-			margin-top: 10px;
-			padding: 12px 20px;
-			text-align: center;
-			text-decoration: none;
-		}
       </style>
     </head>
     <body>
@@ -94,16 +94,18 @@ button[type="submit"]:hover {
             <h1>Recruitment of interns</h1>
             <nav>
               <ul>
-                <li><a href="home.html">Welcome</a></li>
+                <li><a href="home.html">Home</a></li>
+				<li><a href="ooffresstage.html"> intenship offers </a></li>
                 <li><a href="intern information.html">intern information</a></li>
                 <li><a href="about us.html">About Us</a></li>
                 <li><a href="contact us.html">contact us</a></li>
+				
               </ul>
             </nav>
             <a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
         </header>
-	<center><h1>intern information</h1></center>
-	<section >
+	<center><h1 id="az">intern information</h1></center>
+	<section>
 		<label for="nom">Nom :</label>
 		<input type="text" id="nom" name="nom" required>
 
@@ -133,15 +135,17 @@ button[type="submit"]:hover {
 		<input type="text" id="durer" required>
 		<label for="service">service:</label>
 		<input type="text" id="service" name="service" required>
-
-		<label for="cv">CV :</label>
-
+		<label for="age">age:</label>
+		<input type="number" id="age" name="age" required>
 		<label for="fichier-pdf">Sélectionnez CV PDF à téléverser :</label>
 		<input type="file" name="fichier-pdf" id="fichier-pdf" accept="application/pdf">
 		
         <center><button type="submit">Envoyer</button></center>
 	</section>
-	    
+    <footer>
+		<p>&copy; 2023 By our company. All rights reserved.</p>
+	</footer>
 
+	
 </body>
 </html>
