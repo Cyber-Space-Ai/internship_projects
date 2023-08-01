@@ -5,16 +5,18 @@
       <meta name="description" content="  ">
       <title>Contact us</title>
       <style>
-                body {
-  font-family: Arial, sans-serif;
+   body {
+    font-size: larger;
   margin: 0;
   padding: 0;
+  text-align: initial;
+
 }
 
 header {
-  background-color: #2d47d8;
-  color: #fff;
-  padding: 20px;
+  background-color: #1725f3;
+  color:rgb(243, 243, 248) ;
+  padding: 10px;
 }
 nav ul {
   list-style: none;
@@ -30,12 +32,36 @@ nav li {
 nav a {
   color: #fff;
   text-decoration: none; }
-  section {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      border: 10px solid  #0e30f3;
-      }
+  h2{
+    
+    font-family: 'Times New Roman', Times, serif;
+   font-size: 40px;
+   font-weight: 40px;
+   text-align: center;
+   color:black;
+  }
+   form{
+    background-color: #1725f3;
+    border: #1725f3;
+    text-align: center;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding-bottom: 40px;
+    width: 800px;
+    margin: auto;
+    color: #f8f3f6;
+   }
+   button{
+    
+    cursor: pointer;
+    color: #1a1417;
+     width: 3cm;
+    margin-right: 10cm;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 20px;
+   font-weight: 20px;
+   text-align: center;
+   color:black
+   }
 
       </style>
     </head>
@@ -56,33 +82,37 @@ nav a {
           </header>
 		   
      <main>
-		<section>
+		
 
       <br><h2>Contacte us</h2>
       <p>For any questions or additional information, do not hesitate to contact us :</p>
-      <ul>
+      <ul type ="square">
         <li>Téléphone :Le numéro de téléphone est le +212610781949 </li>
         <li>Email : </li>
         <li>Adresse :</li>
       </ul>
-    <p><h2>Site web</h2> 
+    <p>
+      Site web:
       <a href= https://cyberaispace.com/>https://cyberaispace.com/</a> 
        </p>
-			<label for="name">Nom:</label>
-			<input type="text" id="name" name="name" required>
+       <h2>send your message</h2>
+       <form>
+       
+			<label for="name">Nom:</label><br>
+			<input type="text" id="name" name="name" required><br>
 
-			<label for="email">Adresse e-mail:</label>
-			<input type="email" id="email" name="email" required>
+			<label for="email">Adresse e-mail:</label><br>
+			<input type="email" id="email" name="email" required><br>
 
-			<label for="subject">Sujet:</label>
-			<input type="text" id="subject" name="subject" required>
+			<label for="subject">Sujet:</label><br>
+			<input type="text" id="subject" name="subject" required><br>
 
-			<label for="message">Message:</label>
-			<textarea id="message" name="message" required></textarea>
+			<label for="message">Message:</label><br>
+			<textarea id="message" name="message" required></textarea><br>
 
-			<input type="submit" value="Envoyer">
-    
-      </section>
+			<button type="submit">send</button>
+    </form>
+     
 	</main>
   <footer>
 		<p>&copy; 2023 By our company. All rights reserved.</p>
