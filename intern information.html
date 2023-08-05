@@ -6,16 +6,16 @@
       <title>INTERN INFORMATION</title>
 	  <link rel="<stylesheet" href="base"/>
       <style>
-                body {
+      body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-size: 110%;
+  text-align: auto;
 }
 
 header {
-  background-color: #2d47d8;
-  color: #fff;
-  padding: 20px;
+  background-color: #1725f3;
+  color:#fff ;
+  padding: 10px;
 }
 nav ul {
   list-style: none;
@@ -32,17 +32,16 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
-body {
-	font-family: Arial, sans-serif;
 
-	border: #370cf8;
-}
 
 section {
       max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
+      margin-top: 10px;
+	  margin-left: 20%;
+      padding: 40px;
       border: 5px solid  #0e30f3;
+	  background-color: #0e30f3;
+	  color:#fff;
       }
       
 label {
@@ -54,29 +53,44 @@ input, select, textarea {
 	padding: 5px;
 	margin-bottom: 10px;
 	border-radius: 5px;
-	border: 2px solid #1239e6f3;
+	border: 2px solid #f6f6f8da;
 	font-size: 16px;
 }
 
 button[type="submit"] {
-	background-color: #0b1aeee3;
-	color: white;
+	background-color: #fbfbfdef;
+	color: black;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
 	font-size: 16px;
 	cursor: pointer;
+	width: 4cm;
 }
 
 button[type="submit"]:hover {
 	background-color: #cad4f5e1;
 }
 
+button[type="reset"] {
+	background-color: #f7f7fcf6;
+	color: black;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 4px;
+	width: 4cm;
+}
+
 		input[type="file"] {
-			border: 2px solid #370cf8;
+			border: 2px solid #fff;
 			border-radius: 4px;
-			font-size: 16px;
-			padding: 12px 15px;
+			font-size: 13px;
+			padding: 12px 14px;
+			background-color: #fff;
+			color: black;
 	 }
 		section a {
       display: inline-block;
@@ -86,12 +100,33 @@ button[type="submit"]:hover {
       border-radius: 5px;
       text-decoration: none;
       }
+     #xx{
+		display: inline-block;
+      background-color: #0e30f3;
+	  margin-left: 15cm;
+      color: #fff;
+      padding: 10px 10px;
+      border-radius: 5px;
+      text-decoration: none;
 
+	 }
+	
+	 
+	 .con{
+		display: flex;
+		column-gap: 30%;
+	 }
+	 p{
+		font-size: xx-large;
+	 }
+
+	 
       </style>
     </head>
     <body>
         <header>
-            <h1>Recruitment of interns</h1>
+			<a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
+			<center><h1>Recruitment of interns</h1></center>
             <nav>
               <ul>
                 <li><a href="home.html">Home</a></li>
@@ -102,35 +137,41 @@ button[type="submit"]:hover {
 				
               </ul>
             </nav>
-            <a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
+            
         </header>
-	<center><h1 id="az">intern information</h1></center>
+		<center><h1>intern information</h1></center>
 	<section>
-		<label for="nom">Nom :</label>
-		<input type="text" id="nom" name="nom" required>
+		<form>
+			<div class="con">
+			<div class="er">
+		<label >Nom :</label>
+		<input type="text"  name="nom" required>
 
 		<label for="prenom">Prénom :</label>
-		<input type="text" id="prenom" name="prenom" required>
+		<input type="text"  name="prenom" required>
 
 		<label for="email">Email :</label>
-		<input type="email" id="email" name="email" required>
+		<input type="email"  name="email" required>
 
 		<label for="telephone">Téléphone :</label>
-		<input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+		<input type="tel"  name="telephone" pattern="[0-9]{10}" required>
 
 		<label for="niveau">Niveau d'études :</label>
-		<select id="niveau" name="niveau" required>
+		<select  name="niveau" required>
 			<option value="">Sélectionnez un niveau</option>
 			<option value="Bac">Bac</option>
+			<option value="Bac+1">Bac+1</option>
 			<option value="Bac+2">Bac+2</option>
 			<option value="Bac+3">Bac+3</option>
 			<option value="Bac+5">Bac+5</option>
 		</select>
-		<label for="genre">sexe: :</label>
-        <select id="genre" name="genre" required>
-			<option value="masculin">masculin</option>
-			<option value="fèminin">fèminin</option>	
-		</select>
+		<label for="genre">genre: </label>
+		<label for="genre">male</label>
+        <input type="radio" name="genre" class="genre " value="a">
+		<label for="genre">famale </label>
+        <input type="radio" name="genre" class="genre " value="a">
+	</div>
+		<div class="ze">
 		<label for="durer">durèe de stage :</label>
 		<input type="text" id="durer" required>
 		<label for="service">service:</label>
@@ -138,10 +179,17 @@ button[type="submit"]:hover {
 		<label for="age">age:</label>
 		<input type="number" id="age" name="age" required>
 		<label for="fichier-pdf">Sélectionnez CV PDF à téléverser :</label>
-		<input type="file" name="fichier-pdf" id="fichier-pdf" accept="application/pdf">
-		
+		<input type="file" name="fichier-pdf" id="fichierpdf" accept="application/pdf">
+		<label for="fichier-pdf">lettre de motivation :</label>
+		<input type="file" name="fichier-pdf" id="fichierpdf" accept="application/pdf">
         <center><button type="submit">Envoyer</button></center>
+		<center><button type="reset">delte</button></center>
+	</div>
+</div>
+	</form>
 	</section>
+	<p id="q">For any questions or additional information, do not hesitate to contact us :</p>
+	<a  href="contact us.html" id="xx"> click her</a>
     <footer>
 		<p>&copy; 2023 By our company. All rights reserved.</p>
 	</footer>
