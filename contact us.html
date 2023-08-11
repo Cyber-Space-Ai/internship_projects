@@ -12,7 +12,7 @@
 }
 
 header {
-  background-color: #1725f3;
+  background-image:url("coding.jpg");
   color:rgb(243, 243, 248) ;
   padding: 10px;
 }
@@ -39,38 +39,65 @@ nav a {
    color:black;
   }
    form{
-    background-color: #1725f3;
-    border: #1725f3;
+   
+    border: #1a1a1b 2px  solid;
     text-align: center;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
     padding-bottom: 40px;
-    width: 800px;
+    width: 500px;
     margin: auto;
-    color: #f8f3f6;
+    color: #131112;
    }
-   button{
-    
-    cursor: pointer;
-    color: #1a1417;
-     width: 3cm;
-    margin-right: 10cm;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   font-size: 20px;
-   font-weight: 20px;
-   text-align: center;
-   }
-   #sq{
-    margin-left: 15cm;
-   }
+   
+button[type="submit"] {
+	background-color:#092038e7;
+	color:white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 4cm;
+  
+}
+
+button[type="submit"]:hover {
+	background-color: #c4ceece1;
+}
+
+button[type="reset"] {
+	background-color:#092038e7;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 4px;
+	width: 4cm;
+ 
+}
+button[type="reset"]:hover {
+	background-color:#c4ceece1;
+}
+.rrt{
+  display: flex;
+  column-gap: 30%;
+  padding: 10%;
+margin-top: 2px;
+ }
+ .aa{
+  width: 500px;
+ }
       </style>
     </head>
     <body>
         <header>
-          <a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
-        <center>   <h1>Recruitment of interns</h1></center>
+          <a href="index.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
+       
             <nav>
               <ul>
-                <li><a href="home.html">Home </a></li>
+                <li><a href="index.html">Home </a></li>
                 <li><a href="ooffresstage.html"> intenship offers </a></li>
                 <li><a href="intern information.html">intern information</a></li>
                 <li><a href="about us.html">About Us</a></li>
@@ -82,20 +109,26 @@ nav a {
 		   
      <main>
 		
-
+<div class="rrt">
+    <div class="aa">
       <br><h2>Contacte us</h2>
       <p>For any questions or additional information, do not hesitate to contact us :</p>
       <ul type ="square">
-        <li>Téléphone :Le numéro de téléphone est le +212610781949 </li>
-        <li>Email :  </li>
+        <li>Téléphone :Le numéro de téléphone est 
+          <br> +212610781949 </li><BR>
+        <li>Email : 
+          <br> mounir@cyberaispace.com </li>
+          <li><p>
+            Site web:
+            <a href= https://cyberaispace.com/>https://cyberaispace.com/</a> 
+             </p></li>
       </ul>
-    <p>
-      Site web:
-      <a href= https://cyberaispace.com/>https://cyberaispace.com/</a> 
-       </p>
-       <h2>send your message</h2>
+    
+      
+      </div>
+    <div>
+      <h2>send your message</h2>
        <form>
-       
 			<label for="name">Nom:</label><br>
 			<input type="text"id="za" name="name" required><br>
 
@@ -109,9 +142,10 @@ nav a {
 			<textarea  name="message" required></textarea><br>
 
 			<button type="submit">send</button>
-      <center><button type="reset" id="sq">delte</button></center>
+      <center><button type="reset" id="sq">delete</button></center>
     </form>
-     
+  </div>
+  </div>
 	</main>
   <footer>
 		<p>&copy; 2023 By our company. All rights reserved.</p>
