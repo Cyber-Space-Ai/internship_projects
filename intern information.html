@@ -13,7 +13,7 @@
 }
 
 header {
-  background-color: #1725f3;
+	background-image:url("coding.jpg");
   color:#fff ;
   padding: 10px;
 }
@@ -39,9 +39,8 @@ section {
       margin-top: 10px;
 	  margin-left: 20%;
       padding: 40px;
-      border: 5px solid  #0e30f3;
-	  background-color: #0e30f3;
-	  color:#fff;
+      border: 5px solid  #0e0e0f;
+	  color:#0c0c0c;
       }
       
 label {
@@ -53,13 +52,13 @@ input, select, textarea {
 	padding: 5px;
 	margin-bottom: 10px;
 	border-radius: 5px;
-	border: 2px solid #f6f6f8da;
+	border: 2px solid #050525da;
 	font-size: 16px;
 }
 
 button[type="submit"] {
-	background-color: #fbfbfdef;
-	color: black;
+	background-color: #092038e7;
+	color:white;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
@@ -69,12 +68,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-	background-color: #cad4f5e1;
+	background-color: #c4ceece1;
 }
 
 button[type="reset"] {
-	background-color: #f7f7fcf6;
-	color: black;
+	background-color:#092038e7;
+	color: white;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
@@ -83,18 +82,21 @@ button[type="reset"] {
 	margin-top: 4px;
 	width: 4cm;
 }
+button[type="reset"]:hover {
+	background-color:#c4ceece1;
+}
 
 		input[type="file"] {
 			border: 2px solid #fff;
 			border-radius: 4px;
 			font-size: 13px;
 			padding: 12px 14px;
-			background-color: #fff;
-			color: black;
+			background-color: #0a0303;
+			color: rgb(250, 248, 248);
 	 }
 		section a {
       display: inline-block;
-      background-color: #0e30f3;
+      background-color: #2d2d31;
       color: #fff;
       padding: 10px 20px;
       border-radius: 5px;
@@ -102,7 +104,7 @@ button[type="reset"] {
       }
      #xx{
 		display: inline-block;
-      background-color: #0e30f3;
+      background-color:#092038e7;
 	  margin-left: 15cm;
       color: #fff;
       padding: 10px 10px;
@@ -117,19 +119,19 @@ button[type="reset"] {
 		column-gap: 30%;
 	 }
 	 p{
-		font-size: xx-large;
+		font-size: large;
 	 }
-
+    
 	 
       </style>
     </head>
     <body>
         <header>
-			<a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
-			<center><h1>Recruitment of interns</h1></center>
+			<a href="index.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
+
             <nav>
               <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
 				<li><a href="ooffresstage.html"> intenship offers </a></li>
                 <li><a href="intern information.html">intern information</a></li>
                 <li><a href="about us.html">About Us</a></li>
@@ -141,49 +143,48 @@ button[type="reset"] {
         </header>
 		<center><h1>intern information</h1></center>
 	<section>
-		<form>
+		<form  method="post" id="form1">
 			<div class="con">
 			<div class="er">
-		<label >Nom :</label>
-		<input type="text"  name="nom" required>
+		<label > first name:</label>
+		<input type="text"  id="nom" required>
+		<label >last name:</label>
+		<input type="text"  id="prenom" required>
 
-		<label for="prenom">Prénom :</label>
-		<input type="text"  name="prenom" required>
+		<label >Email :</label>
+		<input type="email"  id="email" required>
 
-		<label for="email">Email :</label>
-		<input type="email"  name="email" required>
+		<label >phone number:</label>
+		<input type="tel"  id="telephone"  required>
 
-		<label for="telephone">Téléphone :</label>
-		<input type="tel"  name="telephone" pattern="[0-9]{10}" required>
-
-		<label for="niveau">Niveau d'études :</label>
-		<select  name="niveau" required>
-			<option value="">Sélectionnez un niveau</option>
+		<label >level of studies :</label>
+		<select  id="niveau" required>
+			<option value="">Select a level</option>
 			<option value="Bac">Bac</option>
 			<option value="Bac+1">Bac+1</option>
 			<option value="Bac+2">Bac+2</option>
 			<option value="Bac+3">Bac+3</option>
 			<option value="Bac+5">Bac+5</option>
 		</select>
-		<label for="genre">genre: </label>
-		<label for="genre">male</label>
-        <input type="radio" name="genre" class="genre " value="a">
-		<label for="genre">famale </label>
-        <input type="radio" name="genre" class="genre " value="a">
+		<label >gender: </label>
+		<label >male</label>
+        <input type="radio" id="genre" value="a">
+		<label >famale </label>
+        <input type="radio" id="genre"  value="a">
 	</div>
 		<div class="ze">
-		<label for="durer">durèe de stage :</label>
-		<input type="text" id="durer" required>
-		<label for="service">service:</label>
-		<input type="text" id="service" name="service" required>
-		<label for="age">age:</label>
-		<input type="number" id="age" name="age" required>
-		<label for="fichier-pdf">Sélectionnez CV PDF à téléverser :</label>
-		<input type="file" name="fichier-pdf" id="fichierpdf" accept="application/pdf">
-		<label for="fichier-pdf">lettre de motivation :</label>
-		<input type="file" name="fichier-pdf" id="fichierpdf" accept="application/pdf">
-        <center><button type="submit">Envoyer</button></center>
-		<center><button type="reset">delte</button></center>
+		<label >duration of internship :</label>
+		<input type="text" id="durer"  required>
+		<label >service:</label>
+		<input type="text" id="service" required>
+		<label>age:</label>
+		<input type="number" id="age"  min="16"  value="16" required>
+		<label >Select CV PDF to upload:</label>
+		<input type="file" id="fichierpdf" accept="application/pdf" required>
+		<label lettre de motivation :</label>
+		<input type="file" id="fichierpdf" accept="application/pdf" required>
+        <center><button type="submit">Send</button></center>
+		<center><button type="reset">delete</button></center>
 	</div>
 </div>
 	</form>
@@ -191,9 +192,10 @@ button[type="reset"] {
 	<p id="q">For any questions or additional information, do not hesitate to contact us :</p>
 	<a  href="contact us.html" id="xx"> click her</a>
     <footer>
-		<p>&copy; 2023 By our company. All rights reserved.</p>
+		<p id="ser">&copy; 2023 By our company. All rights reserved.</p>
 	</footer>
 
-	
+	<script src="app.js">
+	</script>
 </body>
 </html>
