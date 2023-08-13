@@ -107,6 +107,7 @@ margin-top: 2px;
             </nav>
               </header>
 		   
+     
      <main>
 		
 <div class="rrt">
@@ -117,7 +118,7 @@ margin-top: 2px;
         <li>Téléphone :Le numéro de téléphone est 
           <br> +212610781949 </li><BR>
         <li>Email : 
-          <br> mounir@cyberaispace.com </li>
+          <br> <a href="mailto:mounir@cyberaispace.com">mounir@cyberaispace.com</a> </li>
           <li><p>
             Site web:
             <a href= https://cyberaispace.com/>https://cyberaispace.com/</a> 
@@ -128,21 +129,26 @@ margin-top: 2px;
       </div>
     <div>
       <h2>send your message</h2>
-       <form>
-			<label for="name">Nom:</label><br>
-			<input type="text"id="za" name="name" required><br>
+       <form  action="https://formspree.io/f/xvojkwaq" method="POST">
+        <input type="hidden" name="_subject" value="cyberaispace internship Email">
+        
+			<label for="name">first name:</label><br>
+			<input type="text" id="name" required><br>
+
+      <label for="name">last name:</label><br>
+			<input type="text" id="last name" required><br>
 
 			<label for="email" >Adresse e-mail:</label><br>
-			<input type="email" id="za" name="email" required><br>
+			<input type="email" id="email" name="email" required><br>
 
-			<label for="subject">Sujet:</label><br>
-			<input type="text"id="za"name="subject" required><br>
+			<label for="subject">subject:</label><br>
+			<input type="text"id="subject" required><br>
 
 			<label for="message">Message:</label><br>
-			<textarea  name="message" required></textarea><br>
+			<textarea  id="message" required></textarea><br>
 
-			<button type="submit">send</button>
-      <center><button type="reset" id="sq">delete</button></center>
+		  <center><button type="submit" id="btn" >send</button></center>
+      <center><button type="reset">delete</button></center>
     </form>
   </div>
   </div>
@@ -150,5 +156,6 @@ margin-top: 2px;
   <footer>
 		<p>&copy; 2023 By our company. All rights reserved.</p>
 	</footer>
+ 
 </body>
 </html>
