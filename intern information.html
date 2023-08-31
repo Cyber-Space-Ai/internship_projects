@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-      <meta name="description" content="  ">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="description" content="internship  ">                              
       <title>INTERN INFORMATION</title>
 	  <link rel="<stylesheet" href="base"/>
       <style>
@@ -128,7 +128,8 @@ button[type="reset"]:hover {
     <body>
         <header>
 			<a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
-
+    <br>
+	
             <nav>
               <ul>
                 <li><a href="home.html">Home</a></li>
@@ -143,21 +144,21 @@ button[type="reset"]:hover {
         </header>
 		<center><h1>intern information</h1></center>
 	<section>
-		<form  method="post" id="form1">
+		<form action="http://localhost:3000/insert" method="POST" id="userForm">
 			<div class="con">
 			<div class="er">
-		<label > first name:</label>
+		<label for="nom"> first name:</label>
 		<input type="text"  id="nom" required>
-		<label >last name:</label>
+		<label for="prenom">last name:</label>
 		<input type="text"  id="prenom" required>
 
-		<label >Email :</label>
+		<label for="email">Email :</label>
 		<input type="email"  id="email" required>
 
-		<label >phone number:</label>
+		<label  for="telephone">phone number:</label>
 		<input type="tel"  id="telephone"  required>
 
-		<label >level of studies :</label>
+		<label for="niveau">level of studies :</label>
 		<select  id="niveau" required>
 			<option value="">Select a level</option>
 			<option value="Bac">Bac</option>
@@ -167,22 +168,22 @@ button[type="reset"]:hover {
 			<option value="Bac+5">Bac+5</option>
 		</select>
 		<label >gender: </label>
-		<label >male</label>
-        <input type="radio" id="genre" value="a">
-		<label >famale </label>
-        <input type="radio" id="genre"  value="a">
+		<label for="genre">male</label>
+        <input type="radio" id="genre" name="genre" value="male">
+		<label for="gnre">famale </label>
+        <input type="radio" id="genre" name="genre"  value="famale ">
 	</div>
 		<div class="ze">
-		<label >duration of internship :</label>
+		<label for="durer" >duration of internship :</label>
 		<input type="text" id="durer"  required>
-		<label >service:</label>
+		<label for =service >service:</label>
 		<input type="text" id="service" required>
-		<label>age:</label>
+		<label for="age">age:</label>
 		<input type="number" id="age"  min="16"  value="16" required>
-		<label >Select CV PDF to upload:</label>
+		<label for="fichierpdf" >Select CV PDF to upload:</label>
 		<input type="file" id="fichierpdf" accept="application/pdf" required>
-		<label lettre de motivation :</label>
-		<input type="file" id="fichierpdf" accept="application/pdf" required>
+		<label for="fichier"> lettre de motivation :</label>
+		<input type="file" id="fichier" accept="application/pdf" required>
         <center><button type="submit">Send</button></center>
 		<center><button type="reset">delete</button></center>
 	</div>
@@ -194,8 +195,6 @@ button[type="reset"]:hover {
     <footer>
 		<p id="ser">&copy; 2023 By our company. All rights reserved.</p>
 	</footer>
-
-	<script src="app.js">
-	</script>
+	    <script src="app.js"></script>
 </body>
 </html>
