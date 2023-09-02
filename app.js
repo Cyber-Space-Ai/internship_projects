@@ -1,64 +1,61 @@
-const express = require('express');
-const mongodb = require('mongodb');
+var express=require("express");
+var bodyParser=require("body-parser");
 
-const app = express();
-const port = 3000;
+const mongoose = require('mongoose');
+mongoose.connect(
+'mongodb+srv://salima:n2Dv34yFApQNYmOx@cluster0.d8bcbdk.mongodb.net/?retryWrites=true&w=majority');
+var db=mongoose.connection;
+db.on('error', console.log.bind(console, "connection error"));
+db.once('open', function(callback){
+	console.log("connection succeeded");
+})
 
-// MongoDB Atlas connection details
-const mongoURL = 'mongodb+srv://salima:n2Dv34yFApQNYmOx@cluster0.d8bcbdk.mongodb.net/?retryWrites=true&w=majority';
+var app=express()
 
-// Database and collection names
-const dbName = 'internship';
-const collectionName = 'document';
 
-// Middleware to parse the request body
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
 
-// Route handler for form submission
-app.post('/insert', (req, res) => {
-  // Extract form data
-  const { nom, prenom, email, telephone, niveau, genre, durer, service, age } = req.body;
+app.post('/sign_up', function(req,res){
+	var name = req.body.name;
+	var lastname = req.body.lastname;
+	var email =req.body.email;
+	var phone =req.body.phone;
+    var niveau= req.body.niveau;
+	var genre= req.body.genre;
+	var durer= req.body.durer;
+	var service= req.body.service;
+	var age= req.body.age;
+	var data = {
+		"name": name,
+		"lastname":lastname,
+		"email":email,
+		"phone":phone,
+        "niveau":niveau,
+		"genre":genre,
+		"durer" :durer,
+		"service":service,
+		"age":age
+	}
+db.collection('document').insertOne(data,function(err, collection){
+		if (err) throw err;
+		console.log("Record inserted Successfully");
+			
+	});
+		
+	return alert("Successful Registration");
+})
 
-  // Create a new document object
-  const document = {
-    nom,
-    prenom,
-    email,
-    telephone,
-    niveau,
-    genre,
-    durer,
-    service,
-    age: parseInt(age),
-  };
 
-  // Connect to MongoDB Atlas
-  mongodb.MongoClient.connect(mongoURL, { useUnifiedTopology: true }, (err, client) => {
-    if (err) {
-      console.error(err);
-      return res.sendStatus(500);
-    }
+app.get('/',function(req,res){
+res.set({
+	'Access-control-Allow-Origin': '*'
+	});
+return res.redirect('index.html');
+}).listen(3000)
 
-    // Select the database
-    const db = client.db(dbName);
 
-    // Insert the document into the collection
-    db.collection(collectionName).insertOne(document, (err) => {
-      if (err) {
-        console.error(err);
-        return res.sendStatus(500);
-      }
-
-      // Close the MongoDB connection
-      client.close();
-
-      // Redirect the user or send a success message
-      res.send('Form submitted successfully!');
-    });
-  });
-});
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+console.log("server listening at port 3000");
