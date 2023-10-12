@@ -90,10 +90,9 @@ app.post('/sign_up', function(req, res){
 
 app.get('/', function(req, res){
     res.set({
-        'Access-control-Allow-Origin': '*'
+        
     });
-    // Rediriger l'utilisateur vers une autre page ici
-    // Par exemple, utiliser res.redirect('/autre_page') pour rediriger vers "/autre_page"
+    
 });
 
 app.listen(3000, function(){
