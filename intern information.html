@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta name="description" content="internship  ">                              
       <title>INTERN INFORMATION</title>
-	  <link rel="<stylesheet" href="base"/>
+	  <link rel=" stylesheet" href="base"/>
       <style>
       body {
   font-family: Arial, sans-serif;
@@ -121,7 +121,15 @@ button[type="reset"]:hover {
 	 p{
 		font-size: large;
 	 }
-    
+    #foot {
+		background-image:url("coding.jpg");
+  color:#fff ;
+  padding: 10px;
+	
+		font-family: 'Times New Roman', Times, serif;
+		font-size: small;
+		text-align: center;
+	}
 	 
       </style>
     </head>
@@ -132,11 +140,11 @@ button[type="reset"]:hover {
 	
             <nav>
               <ul>
-                <li><a href="home.html">Home</a></li>
-				<li><a href="ooffresstage.html"> intenship offers </a></li>
-                <li><a href="intern information.html">intern information</a></li>
-                <li><a href="about us.html">About Us</a></li>
-                <li><a href="contact us.html">contact us</a></li>
+                <li><a href="home.html"class="nav-link">Home</a></li>
+				<li><a href="ooffresstage.html"class="nav-link"> intenship offers </a></li>
+                <li><a href="intern information.html"class="nav-link">intern information</a></li>
+                <li><a href="about us.html"class="nav-link">About Us</a></li>
+                <li><a href="contact us.html"class="nav-link">contact us</a></li>
 				
               </ul>
             </nav>
@@ -144,59 +152,115 @@ button[type="reset"]:hover {
         </header>
 		<center><h1>intern information</h1></center>
 	<section>
-		<form action="http://localhost:3000/insert" method="POST" id="userForm">
-			<div class="con">
-			<div class="er">
-		<label for="nom"> first name:</label>
-		<input type="text"  id="nom" required>
-		<label for="prenom">last name:</label>
-		<input type="text"  id="prenom" required>
-
-		<label for="email">Email :</label>
-		<input type="email"  id="email" required>
-
-		<label  for="telephone">phone number:</label>
-		<input type="tel"  id="telephone"  required>
-
-		<label for="niveau">level of studies :</label>
-		<select  id="niveau" required>
-			<option value="">Select a level</option>
-			<option value="Bac">Bac</option>
-			<option value="Bac+1">Bac+1</option>
-			<option value="Bac+2">Bac+2</option>
-			<option value="Bac+3">Bac+3</option>
-			<option value="Bac+5">Bac+5</option>
-		</select>
-		<label >gender: </label>
-		<label for="genre">male</label>
-        <input type="radio" id="genre" name="genre" value="male">
-		<label for="gnre">famale </label>
-        <input type="radio" id="genre" name="genre"  value="famale ">
-	</div>
-		<div class="ze">
-		<label for="durer" >duration of internship :</label>
-		<input type="text" id="durer"  required>
-		<label for =service >service:</label>
-		<input type="text" id="service" required>
-		<label for="age">age:</label>
-		<input type="number" id="age"  min="16"  value="16" required>
-		<label for="fichierpdf" >Select CV PDF to upload:</label>
-		<input type="file" id="fichierpdf" accept="application/pdf" required>
-		<label for="fichier"> lettre de motivation :</label>
-		<input type="file" id="fichier" accept="application/pdf" required>
-        <center><button type="submit">Send</button></center>
-		<center><button type="reset">delete</button></center>
-	</div>
-</div>
-	</form>
+		<form action="http://localhost:3000/sign_up" method="post" enctype="multipart/form-data" >	
+		
+			<div class="con">		
+		<div>
+			<label for="nom"> first name:</label>					
+			<input class="box" type="text" name="name" id="name"
+			placeholder="first name" required /><br>
+			<label for="prenom">last name:</label>	
+			<input class="box" type="text" name="lastname" id="lastname"
+			placeholder="last name" required /><br>
+			<label for="email">Email :</label>	
+			<span id="emailError"></span>
+			<input class="box" type="email" name="email" id="email"
+			placeholder="E-Mail " required /><br>
+							
+			
+			<label  for="telephone">phone number:</label>			
+			<input class="box" type="tel" name="phone" id="phone"
+			placeholder="Phone Number "  min="0" /><br>
+						<br>
+			<label for="niveau">level of studies :</label>
+				<select  id="niveau"  name="niveau"required>
+							<option value="">Select a level</option>
+							<option value="Bac">Bac</option>
+							<option value="Bac+1">Bac+1</option>
+							<option value="Bac+2">Bac+2</option>
+							<option value="Bac+3">Bac+3</option>
+							<option value="Bac+5">Bac+5</option>
+						</select>
+						<br>
+		    <label >gender: </label>
+		    <label for="genre">male</label>
+			     <input type="radio" id="genre" name="genre" value="male">
+		   <label for="gnre">famale </label>
+			     <input type="radio" id="genre" name="genre"  value="famale ">
+			<br>
+		</div>	
+	<div>	
+			<label for="durer" >duration of internship :</label>
+	           <input type="text" id="durer"  name="durer" required>
+			   <label for =service >service:</label>
+			   <input type="text" id="service" name="service" required>
+			   <label for="age">age:</label>
+			   <input type="number" id="age" name="age"  min="16"  value="16" required>
+			   <label for="fichierpdf" >Select CV PDF to upload:</label>
+			   <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<button type="submit" id="submitDetails" onclick="event"
+			name="submitDetails" value="Submit" >Submit</button> <br>
+			<button type="reset" value="delete" >delete</button>
+		</div>	
+	</div>			
+			</form>
+					
+			
 	</section>
 	<p id="q">For any questions or additional information, do not hesitate to contact us :</p>
 	<a  href="contact us.html" id="xx"> click her</a>
-    <footer>
-		<p id="ser">&copy; 2023 By our company. All rights reserved.</p>
-	      <p> Our Site web:</p>
-            <a href= https://cyberaispace.com/>https://cyberaispace.com/</a> 
-	</footer>
-	    <script src="app.js"></script>
+	<br>
+	<br>
+   
+	<script>
+		const navLinks = document.querySelectorAll('.nav-link');
+		
+		navLinks.forEach(link => {
+		  link.addEventListener('mouseover', () => {
+			link.style.opacity = '0.3'; // Animation d'opacité lors du survol
+		  });
+		  
+		  link.addEventListener('mouseout', () => {
+			link.style.opacity = '1'; // Retour à l'opacité normale après le survol
+		  });
+		});
+	  </script>
+
+	  <script>
+		// Récupérer tous les champs de saisie du formulaire
+		var inputFields = document.getElementsByTagName('input');
+		
+		// Ajouter un gestionnaire d'événement pour chaque champ de saisie
+		for (var i = 0; i < inputFields.length; i++) {
+			inputFields[i].addEventListener('input', function() {
+				var currentInput = this;
+				var nextInputIndex = Array.prototype.indexOf.call(inputFields, currentInput) + 1;
+				
+				// Vérifier si ce n'est pas le dernier champ de saisie
+				if (nextInputIndex < inputFields.length) {
+					var nextInput = inputFields[nextInputIndex];
+					
+					// Désactiver le champ de saisie suivant
+					nextInput.disabled = true;
+					
+					// Ajouter un gestionnaire d'événement pour activer le champ de saisie suivant
+					currentInput.addEventListener('blur', function() {
+						nextInput.disabled = false;
+						nextInput.focus();
+					});
+				}
+			});
+		}
+		
+		
+	</script>
+	              
 </body>
 </html>
