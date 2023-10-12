@@ -42,68 +42,95 @@ h2{
   padding: 10%;
 margin-top: 2px;
  }
+ #foot {
+		background-color:#01060ce7 ;
+		color:#fff;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: small;
+		text-align: center;
+	}
 
       </style>
     </head>
     <body>
         <header>
-          <a href="home.html"><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
+          <a href="home.html"class="nav-link "><center><img src="https://cyberaispace.com/wp-content/uploads/2023/05/cropped-logo-1-151x71.png" alt="Cyber AI Space internship "></center></a>
           <br>
             <nav>
               <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="ooffresstage.html"> intenship offers </a></li>
-                <li><a href="intern information.html">intern information</a></li>
-                <li><a href="about us.html">About Us</a></li>
-                <li><a href="contact us.html">contact us</a></li>
+                  <!-- les lien vers les défferent page de notre site web -->.
+                <li><a href="home.html"class="nav-link ">Home</a></li>
+                <li><a href="ooffresstage.html"class="nav-link "> intenship offers </a></li>
+                <li><a href="intern information.html"class="nav-link ">intern information</a></li>
+                <li><a href="about us.html"class="nav-link ">About Us</a></li>
+                <li><a href="contact us.html"class="nav-link ">contact us</a></li>
                
               </ul>
             </nav>
-                    </header>
-            <div class="rtt">
-        <div class="sqq">
-       <h2><u><u>Info</u></u></h2> 
-        <p>Cyber AI Space is a cybersecurity company that is focused on using 
-            AI and machine learningtechnologies to provide advanced threat intelligence <br>and 
-            defense solutions to our clients. They have a team
-             of experts who use their expertise to build and deploy cutting-edge AI projects</p>
-           
-         <p>
-           
-            <h2><u><u>Specializations</u></u></h2> 
-            Predictive Analytics, Natural Language Processing,AI-Powered Cyber Defense<br>
-            , AI, ML, Backend, frontend, Mobile, IOS, react, DevOps et Full Stack App
+          </header>
+          <div class="rtt">
+      <div class="sqq">
+     <h2><u><u>Info</u></u></h2> 
+      <p>Cyber Space  AI is a cybersecurity company that is focused on using 
+          AI and machine learningtechnologies to provide advanced threat intelligence <br>and 
+          defense solutions to our clients. They have a team
+           of experts who use their expertise to build and deploy cutting-edge AI projects</p>
+           <br>
            <h2><u><u>Sector</u></u></h2> 
-            Développement de logiciels</p>
-          </div>
-          <div class="qss">
-            <h2><u><u>Remote workplace</u></u></h2>
-            <p>
-            We foster a collaborative and inclusive work culture that 
-            promotes work-life balance, personal growth, and professional development<br>
-            us to be part of a supportive team and unleash your potential .
-             <h2><u><u>The head office</u></u></h2> 
-            El Jadida, Casablanca-Settat
-            <h2><u><u>Fondée en</u></u></h2>
-            2023
-           
-           </p>
-          
-            <h2><u><u>Our values</u></u></h2>
-            <ul>
-              <li>Innovation</li>
-              <li>Collaboration</li>
-              <li>Qualité</li>
-              <li>Respect</li>
-            </ul>
-          </div>
+          Développement de logiciels</p>
+          <br>
+        <p> <h2> <u>Mission</u></h2>
+          Notre mission est de développer des projets d’IA de pointe qui tirent parti des dernières <br> technologies pour résoudre des problèmes complexes et améliorer la vie des gens.
+          <br>
+          <h2><u> Vision</u></h2>
+          Notre vision est d’être un innovateur de premier plan dans le développement de solutions d’IA  <br>qui transforment les industries et ont un impact positif sur la socié
+       
+      
         </div>
-          <footer>
-            <p>&copy; 2023 By our company. All rights reserved.</p>
-                <p> Our Site web:</p>
-            <a href= https://cyberaispace.com/>https://cyberaispace.com/</a> 
-
-          </footer> 
+        <div class="qss">
+          <h2><u><u>Remote workplace</u></u></h2>
+          <p>
+          We foster a collaborative and inclusive work culture that 
+          promotes work-life balance, personal growth, and professional development<br>
+          us to be part of a supportive team and unleash your potential .
+           <h2><u><u>The head office</u></u></h2> 
+          El Jadida, Casablanca-Settat
+          <h2><u><u>Fondée en</u></u></h2>
+          2023
+         
+        </p>
+         <p>
+         
+          <h2><u><u>Specializations</u></u></h2> 
+          Predictive Analytics, Natural Language Processing,AI-Powered Cyber Defense<br>
+          , AI, ML, Backend, frontend, Mobile, IOS, react, DevOps et Full Stack App
+        </p>
+        
+          <h2><u><u>Our values</u></u></h2>
+          <ul>
+            <li>Innovation</li>
+            <li>Collaboration</li>
+            <li>Qualité</li>
+            <li>Respect</li>
+          </ul>
+        
+        </div>
+       
+      </div>
+       
+        <script>
+          const navLinks = document.querySelectorAll('.nav-link');
+          
+          navLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+              link.style.opacity = '0.3'; // Animation d'opacité lors du survol
+            });
+            
+            link.addEventListener('mouseout', () => {
+              link.style.opacity = '1'; // Retour à l'opacité normale après le survol
+            });
+          });
+        </script>
           
             </body>
 </html>
