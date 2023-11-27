@@ -20,5 +20,7 @@ Use the npm package manager to install the MongoDB driver by running the followi
 Express allows us to set up middlewares to respond to HTTP Requests         :npm install body-parser --save
 
 If you want to read HTTP POST data , you have to use the “body-parser” node module         :npm install mongoose --save
+          
+          npm install multer
 
 Start the MongoDB. Run app.js file                :node app.js
